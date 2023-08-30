@@ -1,0 +1,12 @@
+name: my-new-project
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  call-reusable-workflow:
+    uses: wagnerm/test-reusable-workflow/blob/main/.github/workflows/default.yaml@main
+    with:
+      cibuild-script: "script/cibuild"
+    secrets:
+      service-api-key: ${{ secrets.SERVICE_API_KEY }}
