@@ -5,7 +5,7 @@ on:
 
 jobs:
   call-reusable-workflow:
-    uses: wagnerm/test-reusable-workflow/blob/main/.github/workflows/default.yaml@main
+    uses: wagnerm/test-reusable-workflow/.github/workflows/default.yaml@main
     with:
       cibuild-script: "script/cibuild"
     secrets:
